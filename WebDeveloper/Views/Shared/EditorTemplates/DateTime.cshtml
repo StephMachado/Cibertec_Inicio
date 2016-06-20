@@ -1,0 +1,25 @@
+﻿@model DateTime?
+
+@*@{
+    String modelValue = "";
+    if (Model.HasValue)
+    {
+        if (Model.Value != DateTime.MinValue)
+        {
+            modelValue = Model.Value.ToShortDateString();
+        }
+    }
+}*@
+
+@*@Html.TextBox("", modelValue, new { @class = "datePicker" })*@
+
+@{
+    DateTime dt = DateTime.Now;
+    if (Model != null)
+    {
+        dt = (System.DateTime)Model;
+
+    }
+} 
+
+@Html.TextBox("", String.Format("{0:d}", dt.ToShortDateString()), new { @class = "datePicker", type = "date" })

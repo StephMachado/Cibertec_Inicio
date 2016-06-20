@@ -26,6 +26,9 @@ namespace WebDeveloper
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css")
                       .Include("~/Css/site.css"));
+            bundles.Add(new ScriptBundle("~/bundles/jqueryui").Include(
+            "~/Scripts/jquery-ui-{version}.js",
+            "~/Scripts/DatePickerReady.js"));
         }
     }
 }
