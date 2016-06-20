@@ -63,6 +63,7 @@ namespace WebDeveloper.Controllers
             return View(product);
         }
 
+        [HttpPost]
         public ActionResult Delete(Product product)
         {
             _product.Delete(product);

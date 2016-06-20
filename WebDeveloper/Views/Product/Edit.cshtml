@@ -10,7 +10,7 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>Product</h4>
         <hr />
@@ -52,8 +52,9 @@
         <div class="form-group">
             @Html.LabelFor(model => model.ExpirationDate, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-               @Html.EditorFor(model => model.ExpirationDate, "DateOnly")
-            @Html.ValidationMessageFor(model => model.ExpirationDate, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.ExpirationDate, new { cssClass = "datePicker" })
+
+                @Html.ValidationMessageFor(model => model.ExpirationDate, "", new { @class = "text-danger" })
             </div>
         </div>
 
