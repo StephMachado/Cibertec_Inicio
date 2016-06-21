@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebDeveloper.Model
 {
@@ -9,7 +10,12 @@ namespace WebDeveloper.Model
         [Required(ErrorMessage ="This field is required")]
         public string Name { get; set; }
         [Display(Name = "Last Name")]
+
         [Required(ErrorMessage = "The Last Name is required")]
         public string LastName { get; set; }
+
+        public Nullable<DateTime> DateCreation { get; set; }
+
+
     }
 }
