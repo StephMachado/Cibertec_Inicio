@@ -14,6 +14,8 @@ namespace WebDeveloper.Model
         [Required(ErrorMessage = "The Last Name is required")]
         public string LastName { get; set; }
 
+        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        [DataType(DataType.Date, ErrorMessage = "Date Only")]
         public Nullable<DateTime> DateCreation { get; set; }
 
 

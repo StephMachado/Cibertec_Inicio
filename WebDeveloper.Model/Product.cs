@@ -7,20 +7,26 @@ namespace WebDeveloper.Model
     {
         public int Id { get; set; }
 
+        public string Description { get; set; }
+        public double Price { get; set; }
+        public DateTime? Date { get; set; }
+
+
+
         [Display(Name = "Name")]
         [StringLength(50)]
-        [Required(ErrorMessage = "Name is required")]
+        //[Required(ErrorMessage = "Name is required")]
         public string Name { get; set; }
 
         [Display(Name = "UM")]
-        [Required(ErrorMessage = "UM is required")]
+        //[Required(ErrorMessage = "UM is required")]
         public string UM { get; set; }
 
         [Display(Name = "EAN Code")]
         public string EANCode { get; set; }
 
         [Display(Name = "Conversion Rate")]
-        [Required(ErrorMessage = "Conversion Rate is required")]
+        //[Required(ErrorMessage = "Conversion Rate is required")]
         public double ConversionRate { get; set; }
 
         private DateTime _dDate = DateTime.MinValue;
