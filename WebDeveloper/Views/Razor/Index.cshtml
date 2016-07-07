@@ -1,0 +1,28 @@
+﻿@model IEnumerable<WebDeveloper.Model.Client>
+
+@*@model WebDeveloper.Model.Client*@
+
+@{
+    ViewBag.Title = "Index";
+    ViewBag.Demo = "Hello World";
+    ViewBag.Title = "Test";
+}
+
+<h1>@ViewBag.Title</h1>
+<br />
+<h2>@ViewBag.Demo</h2>
+
+@foreach (var item in Model)
+{
+    <div class="col-lg-4">
+        <label>Id: </label> @item.ID <br />
+        <label>Name: </label> @item.Name <br />
+        <label>LasName: </label> @item.LastName <br />
+
+        @if (item.DateCreation == null)
+        {
+            item.DateCreation = DateTime.Now;
+        }
+        <label class="">Date: </label> @item.DateCreation <br />
+    </div>
+}
