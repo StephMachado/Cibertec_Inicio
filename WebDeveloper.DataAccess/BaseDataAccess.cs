@@ -41,5 +41,10 @@ namespace WebDeveloper.DataAccess
                 return dbContext.SaveChanges();
             }
         }
+
+        public object GetClient(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
